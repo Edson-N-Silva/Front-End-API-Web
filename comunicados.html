@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inicio.css">
-    <title>Bem-vindo</title>
+    <link rel="stylesheet" href="comunicados.css">
+    <title>Cadastro de Comunicados</title>
 </head>
 <body>
     <div class="container">
@@ -48,37 +48,27 @@
             </nav>
         </div>
         <div class="right">
-            <h1 id="welcomeMessage">Bem-vindo, TESTE!</h1>
-            <div class="top">
-                <div class="dados">
-                    <h2>Resumo Geral</h2>
-                    <div class="dados-container"></div>
+            <div class="comun">
+                <h1>Cadastro de Comunicados</h1>
+                <div class="center">
+                    <form id="form">
+                        <input id="titulo" name="titulo" type="text" placeholder="Digite o titulo" class="inputs required">
+        
+                        <textarea placeholder="Digite o conteudo do comunicado" rows="10" cols="50" name="conteudo" id="conteudo"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
                 </div>
-                <div class="horarios"></div>
-            </div>
-            <div class="mid">
-                <a href="/comunicados.html">Novo Comunicado</a>
-                <a href="#">Minhas Turmas</a>
-                <a href="/getConceito.html">Boletim</a>
-            </div>
-            <div class="bottom">
-                <div id="comunicadosContainer"></div>
-                <div class="eventos"></div>
             </div>
         </div>
     </div>
-    <div id="comunicadoModal" class="modal">
-        <div class="modal-content">
-          <span id="closeModal" class="close">&times;</span>
-          <div class="titulo-modal">
-              <h2 id="modalTitulo"></h2>
-          </div>
-          <div class="conteudo-modal">
-              <p id="modalConteudo"></p>
-          </div>
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h2>Sucesso!</h2>
+            <p>O cadastro foi realizado com sucesso.</p>
         </div>
     </div>
-    <script src="/js/inicio.js"></script>
+    <script src="/js/comunicados.js"></script>
     <script>
         document.getElementById('menuToggle').addEventListener('click', function() {
           const nav = document.querySelector('nav');
@@ -87,5 +77,3 @@
     </script>
 </body>
 </html>
-
-<div class="alunos-js"></div>

@@ -1,14 +1,9 @@
 @font-face {
     font-family: 'MinhaFonte';
-    src: url('/fonts/SFPRODISPLAYBLACKITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYBOLD.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYHEAVYITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYREGULAR.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYTHINITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('OTF');
+    src: url('/fontsNew/AllRoundGothic-Bold.ttf') format('truetype'),
+         url('/fontsNew/AllRoundGothic-Demi.ttf') format('truetype'),
+         url('/fontsNew/AllRoundGothic-Medium.ttf') format('truetype'),
+         url('/fontsNew/AllRoundGothic-XLig.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,11 +12,12 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    font-family: 'MinhaFonte', sans-serif;
 }
 
 body {
     font-family: 'MinhaFonte', sans-serif;
-    background: linear-gradient(297deg, #A369FF 0%, #8B55F5 25.5%, #7342EB 49.5%, #5B2EE0 74.5%, #431BD6 100%);
+    background-color: #05022B;
 }
 
 .imagem-fixa {
@@ -49,7 +45,7 @@ body {
 .left {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
     
 }
 
@@ -130,12 +126,42 @@ button:hover {
 }
 
 .right {
-    width: 700px;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #464590;
+    height: 100vh;
 }
 
 .right img {
     width: 550px;
+    
+}
+
+.left a {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .right {
+        display: none;
+    }
+
+    .left p {
+        font-size: 22px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .left input {
+        width: 120%;
+    }
+
+    button {
+        width: 100%;
+    }
 }

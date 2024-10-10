@@ -24,63 +24,9 @@ body {
     display: flex;
 }
 
-.left {
-    width: 15%;
-    height: 100vh;
-}
-
-nav .top-image {
-    width: 200px;
-}
-
-nav {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin-top: 60px;
-}
-
-#logoutButton {
-    margin-top: 150px;
-    width: 70%;
-    padding: 8px;
-    border: none;
-    border-radius: 16px;
-    font-size: 22px;
-    background-color: #d32020;
-    color: #fff;
-    cursor: pointer;
-}
-
-ul li a{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    cursor: pointer;
-    width: 90%;
-}
-
-ul li img {
-    width: 25px;
-}
-
-ul li a{
-    text-decoration: none;
-    color: #fff;
-}
-
 .right {
-    width: 85%;
+    width: 100%;
     background-color: #D1D1E0;
-    border-radius: 80px 0px 0px 80px;
     box-shadow: 8px 8px 12px #0000003c;
     color: #464590;
     padding: 20px;
@@ -88,6 +34,7 @@ ul li a{
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    height: 100vh;
 }
 
 .right h1 {

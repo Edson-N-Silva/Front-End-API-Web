@@ -1,14 +1,9 @@
 @font-face {
     font-family: 'MinhaFonte';
-    src: url('/fonts/SFPRODISPLAYBLACKITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYBOLD.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYHEAVYITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYLIGHTITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYMEDIUM.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYREGULAR.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYTHINITALIC.OTF') format('OTF'),
-         url('/fonts/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('OTF');
+    src: url('/fontsNew/AllRoundGothic-Bold.ttf') format('truetype'),
+         url('/fontsNew/AllRoundGothic-Demi.ttf') format('truetype'),
+         url('/fontsNew/AllRoundGothic-Medium.ttf') format('truetype'),
+         url('/fontsNew/AllRoundGothic-XLig.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,11 +12,13 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    font-family: 'MinhaFonte', sans-serif;
 }
+
 
 body {
     font-family: 'MinhaFonte', sans-serif;
-    background: linear-gradient(297deg, #A369FF 0%, #8B55F5 25.5%, #7342EB 49.5%, #5B2EE0 74.5%, #431BD6 100%);
+    background-color: #05022B;
 }
 
 .container {
@@ -39,6 +36,9 @@ nav .top-image {
 
 nav {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 ul {
@@ -47,6 +47,18 @@ ul {
     flex-direction: column;
     gap: 40px;
     margin-top: 60px;
+}
+
+#logoutButton {
+    margin-top: 150px;
+    width: 70%;
+    padding: 8px;
+    border: none;
+    border-radius: 16px;
+    font-size: 22px;
+    background-color: #d32020;
+    color: #fff;
+    cursor: pointer;
 }
 
 ul li a{
@@ -66,10 +78,288 @@ ul li a{
     color: #fff;
 }
 
+
 .right {
-    width: 80%;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 20px;
+    width: 85%;
+    height: 100vh;
+    background-color: #D1D1E0;
+    border-radius: 80px 0px 0px 80px;
     box-shadow: 8px 8px 12px #0000003c;
+    color: #464590;
+    padding: 30px;
 }
+
+.right h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+
+.top {
+    display: flex;
+    width: 100%;
+    gap: 60px;
+    height: 25vh;
+}
+
+.horarios {
+    width: 45%;
+    height: 95%;
+    border-radius: 16px;
+    background-color: #05022B;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.dados {
+    width: 55%;
+    height: 95%;
+    border-radius: 16px;
+    background-color: #fff;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dados h2 {
+    font-size: 30px;
+}
+
+.dados-container {
+    display: flex;
+    gap: 30px;
+}
+
+.dados-container .tudo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 12px #00000033;
+    width: 30%;
+    height: 100px;
+    padding: 16px;
+    border-radius: 16px;
+    justify-content: space-between;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.dados-container .tudo .alunos-js {
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    justify-content: center;
+    gap: 30px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.dados-container h3{
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.mid {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.mid a {
+    width: 30%;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 22px;
+    height: 100%;
+    text-transform: uppercase;
+}
+
+.bottom {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    gap: 60px;
+}
+
+.eventos {
+    width: 45%;
+    height: 100%;
+    background-color: #05022B;
+    border-radius: 16px;
+}
+
+#comunicadosContainer {
+    width: 55%;
+    background-color: #fff;
+    padding: 20px;
+    height: 100%;
+    border-radius: 16px;
+    overflow: auto;
+}
+
+
+.comunicado-item {
+    border-radius: 8px;
+    box-shadow: 5px 5px 16px #0000003c;
+    margin-top: 15px;
+    padding: 8px;
+    height: 65px;
+    word-wrap: break-word; /* Quebra de palavras longas */
+    text-overflow: ellipsis; /* Adicionar "..." para texto longo */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.alunos-js img {
+    width: auto;
+    height: 60px;
+}
+
+
+/*------MODAL------*/
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Fundo escuro semitransparente */
+}
+  
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    height: 50%;
+    overflow: auto;
+}
+
+.modal-content h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+.modal-content p {
+    margin-top: 20px;
+    word-wrap: break-word; /* Quebra de palavras longas */
+    text-overflow: ellipsis; /* Adicionar "..." para texto longo */
+    overflow: auto;
+    cursor: pointer;
+}
+
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none; /* Esconder o botão por padrão */
+    background-color: transparent;
+    border: none;
+    color: white; /* Cor do ícone */
+    font-size: 30px; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor de mão */
+}
+
+@media (max-width: 768px) {
+    .left {
+        width: 100%; /* Largura total em telas pequenas */
+        position: relative; /* Para controle de posicionamento */
+    }
+
+
+    .menu-toggle {
+        display: block; /* Mostrar botão de menu hambúrguer */
+        position: absolute; /* Posicionar dentro da div */
+        top: 20px; /* Ajuste a posição se necessário */
+        left: 20px; /* Ajuste a posição se necessário */
+        z-index: 2; /* Para que fique acima do menu */
+        color: #fff;
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    nav{
+        display: none; /* Esconder o menu por padrão em telas pequenas */
+    }
+
+    nav.active {
+        display: flex; /* Mostrar o menu quando ativado */
+        flex-direction: column; /* Ajustar o layout do menu */
+        margin-top: 50px;
+    }
+
+    .right {
+        width: 100%; /* Largura total da div direita em telas pequenas */
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .dados { 
+        width: 100%;
+    }
+
+    .dados-container .tudo {
+        width: 50%;
+    }
+
+    .mid a {
+        font-size: 15px;
+    }
+
+    #comunicadosContainer {
+        width: 100%;
+    }
+
+    .bottom {
+        gap: 0;
+    }
+
+    .eventos {
+        width: 0;
+        display: none;
+    }
+
+    .horarios {
+        display: none;
+    }
+
+    .modal-content {
+        margin: 50% auto;
+    }
+
+    
+}
+

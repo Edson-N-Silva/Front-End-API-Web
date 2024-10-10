@@ -3,50 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="/cadastroCoord.css">
     <title>Cadastro de Usuários</title>
 </head>
 <body>
     <div class="container">
-        <div class="left">
-            <button type="button" class="menu-toggle" id="menuToggle">&#9776;</button>
-            <nav id="navMenu">
-                <a href="/inicio.html"><img class="top-image" src="/imgs/image.png" alt="Logo mediotech"></a>
-                <ul>
-                    <li>
-                        <a href="/inicio.html">
-                            <img src="/icons/Dashboard Layout.png" alt="icone de Inicio">
-                            <p>Ínicio</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/comunicados.html">
-                            <img src="/icons/fone.png" alt="Icone de Auto-falante">
-                            <p>Comunicados</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="/icons/clock.png" alt="Icone de relogio">
-                            <p>Horário</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/getConceito.html">
-                            <img src="/icons/paper-clip.png" alt="Icone de um clip de papel">
-                            <p>Boletim</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/getAlunos.html">
-                            <img src="/icons/User Account.png" alt="Icone de caixa de email">
-                            <p>Gestão</p>
-                        </a>
-                    </li>
-                </ul>
-                <button type="button" id="logoutButton">Sair</button>
-            </nav>
-        </div>
         <div class="right">
             <h1>Cadastro de Usuário</h1>
             <div class="center">
@@ -64,9 +25,7 @@
                     <span class="span-required">Senhas devem ser iguais</span>
     
                     <select name="tipo" id="tipo">
-                        <option value="professor">Professor</option>
                         <option value="coordenador">Coordenador</option>
-                        <option value="aluno">Aluno</option>
                     </select>
     
                     <button type="submit">Cadastrar</button>
@@ -81,7 +40,7 @@
             <p>O cadastro foi realizado com sucesso.</p>
         </div>
     </div>
-    <script src="/js/script.js"></script>
+    <script src="/js/cadastroCoord.js"></script>
     <script>
         const form = document.getElementById('form');
         const campos = document.querySelectorAll('.required');
@@ -130,12 +89,6 @@
                 setError(3);
             }
         }
-    </script>
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-          const nav = document.querySelector('nav');
-          nav.classList.toggle('active'); // Adiciona ou remove a classe 'active' para mostrar/esconder o menu
-      });     
     </script>
 </body>
 </html>

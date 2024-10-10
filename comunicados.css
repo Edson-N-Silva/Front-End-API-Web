@@ -8,12 +8,25 @@
     font-style: normal;
 }
 
+#logoutButton {
+    margin-top: 150px;
+    width: 70%;
+    padding: 8px;
+    border: none;
+    border-radius: 16px;
+    font-size: 22px;
+    background-color: #d32020;
+    color: #fff;
+    cursor: pointer;
+}
+
 * {
     padding: 0;
     box-sizing: border-box;
     margin: 0;
     font-family: 'MinhaFonte', sans-serif;
 }
+
 
 body {
     font-family: 'MinhaFonte', sans-serif;
@@ -35,9 +48,6 @@ nav .top-image {
 
 nav {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 ul {
@@ -46,18 +56,6 @@ ul {
     flex-direction: column;
     gap: 40px;
     margin-top: 60px;
-}
-
-#logoutButton {
-    margin-top: 150px;
-    width: 70%;
-    padding: 8px;
-    border: none;
-    border-radius: 16px;
-    font-size: 22px;
-    background-color: #d32020;
-    color: #fff;
-    cursor: pointer;
 }
 
 ul li a{
@@ -88,10 +86,22 @@ ul li a{
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    justify-content: center;
 }
 
-.right h1 {
-    font-size: 40px;    
+.comun {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 22px;
+}
+
+.right {
+    width: 85%;
+    background-color: #D1D1E0;
+    border-radius: 80px 0px 0px 80px;
+    box-shadow: 8px 8px 12px #0000003c;
+    color: #464590;
+    padding: 20px;
 }
 
 
@@ -99,46 +109,31 @@ ul li a{
     display: flex;
     flex-direction: column;
     gap: 25px;
-    background-color: #05022B;
-    width: 100%;
-    height: 500px;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 50px;
-    border-radius: 30px;
-    margin-top: 30px;
 }
 
 .right input {
+    margin-top: 20px;
     border: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #431BD6;
     border-radius: 2px;
     outline: none;
     padding: 4px;
     font-size: 16px;
-    width: 80%;
-    background-color: #05022B;
-    color: #fff;
+    width: 400px;
 }
-
-.right input::placeholder {
-    color: #fff;
-    font-size: 18px;
-}
-
-.right select {
-    width: 30%;
-    padding: 8px;
+textarea {
+    border: 2px solid #431BD6;
+    border-radius: 2px;
     outline: none;
-    border: none;
-    border-radius: 16px;
+    padding: 4px;
     font-size: 16px;
+    width: 400px;
 }
 
 .right span {
     display: none;
     font-size: 12px;
-    margin-top: -40px;
+    margin-top: -15px;
 }
 
 .right button {
@@ -148,11 +143,10 @@ ul li a{
     font-size: 18px;
     font-weight: 600;
     border: none;
-    border-radius: 16px;
+    border-radius: 8px;
     background-color: #7342EB;
     color: #fff;
     cursor: pointer;
-    margin-bottom: 40px;
 }
 
 .right button:hover {
@@ -199,9 +193,8 @@ ul li a{
 
 .center {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 80px;
-    width: 80%;
 }
 
 .center img {
@@ -212,6 +205,15 @@ ul li a{
 .center .img1 {
     width: 220px;
     height: 300px;
+}
+
+textarea { 
+    resize: none;
+}
+
+textarea::placeholder {
+    text-align: center;
+    padding-top: 75px;
 }
 
 .menu-toggle {
@@ -254,42 +256,16 @@ ul li a{
         width: 100%; /* Largura total da div direita em telas pequenas */
         height: 100vh;
         border-radius: 0;
+        padding-top: 150px
     }
 
-    .dados { 
-        width: 100%;
+    h1 {
+        font-size: 48px;
     }
 
-    .dados-container .tudo {
-        width: 50%;
+    .right input, select, textarea {
+        font-size: 22px;
+        padding: 10px;
+        border-radius: 22px;
     }
-
-    .mid a {
-        font-size: 15px;
-    }
-
-    #comunicadosContainer {
-        width: 100%;
-    }
-
-    .bottom {
-        gap: 0;
-    }
-
-    .eventos {
-        width: 0;
-        display: none;
-    }
-
-    .horarios {
-        display: none;
-    }
-
-    .modal-content {
-        margin: 50% auto;
-    }
-
-    
 }
-
-

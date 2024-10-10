@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/getProfs.css">
+    <title>Bem-vindo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <button type="button" class="menu-toggle" id="menuToggle">&#9776;</button>
+            <nav id="navMenu">
+                <a href="/inicio.html"><img class="top-image" src="/imgs/image.png" alt="Logo mediotech"></a>
+                <ul>
+                    <li>
+                        <a href="/inicio.html">
+                            <img src="/icons/Dashboard Layout.png" alt="icone de Inicio">
+                            <p>Ínicio</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/comunicados.html">
+                            <img src="/icons/fone.png" alt="Icone de Auto-falante">
+                            <p>Comunicados</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/icons/clock.png" alt="Icone de relogio">
+                            <p>Horário</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/getConceito.html">
+                            <img src="/icons/paper-clip.png" alt="Icone de um clip de papel">
+                            <p>Boletim</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/getAlunos.html">
+                            <img src="/icons/User Account.png" alt="Icone de caixa de email">
+                            <p>Gestão</p>
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" id="logoutButton">Sair</button>
+            </nav>
+        </div>
+        <div class="right">
+            <h1>Gestão</h1>
+            <div class="top">
+                <a href="/getAlunos.html" style="background-color: #464590; color: #fff;">Alunos</a>
+                <a href="/getTurma.html">Turmas</a>
+                <a href="/getProfs.html">Professores</a>
+                <a href="/getCoord.html">Gestores</a>
+                <a href="/getDiscplina.html">Disciplinas</a>
+            </div>
+            <div id="table-container">
+                
+            </div>
+            <div class="bottom">
+                <a href="/register.html">Novo Usuário</a>
+                <a href="#">Nova Turma</a>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+    <div id="comunicadoModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <form id="formModal">
+                <h2>Nova Turma</h2>
+                <input type="text" name="nome" id="nome" placeholder="Nome:">
+                <input type="number" name="ano" id="ano" placeholder="Ano:">
+                <select name="serie" id="serie">
+                    <option value="1º Ano">1º   Ano</option>
+                    <option value="2º Ano">2º Ano</option>
+                    <option value="3º Ano">3º Ano</option>
+                </select>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="atualizarModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal-aluno" class="close">&times;</span>
+            <form id="formModal-aluno">
+                <h2 id="modalTitle">Atualizar Aluno</h2>
+
+                <input id="nome-aluno" name="nome" type="text" placeholder="Digite o nome" class="inputs required">
+
+                <input type="email" name="email" id="email-aluno" placeholder="Digite o email" class="inputs required">
+
+                <input type="password" name="password" id="password" placeholder="Digite a senha" class="inputs required" oninput="mainPasswordValidade()">
+                <span class="span-required">Digite uma senha com no mínimo 8 caracteres</span>
+
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Digite a senha novamente" class="inputs required" oninput="comparePassword()">
+                <span class="span-required">Senhas devem ser iguais</span>
+                <!-- Botão de Submissão -->
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+    <div id="successPopup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <h2>Sucesso!</h2>
+            <p>O cadastro foi realizado com sucesso.</p>
+        </div>
+    </div>
+    <script src="/js/getAlunos.js"></script>
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+          const nav = document.querySelector('nav');
+          nav.classList.toggle('active'); // Adiciona ou remove a classe 'active' para mostrar/esconder o menu
+      });     
+    </script>
+</body>
+</html>

@@ -1,0 +1,611 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('/fontsNew/AllRoundGothic-Bold.ttf') format('truetype'),
+         url('/fontsNew/AllRoundGothic-Demi.ttf') format('truetype'),
+         url('/fontsNew/AllRoundGothic-Medium.ttf') format('truetype'),
+         url('/fontsNew/AllRoundGothic-XLig.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'MinhaFonte', sans-serif;
+}
+
+
+body {
+    font-family: 'MinhaFonte', sans-serif;
+    background-color: #05022B;
+}
+
+.container {
+    display: flex;
+}
+
+.left {
+    width: 15%;
+    height: 100vh;
+}
+
+nav .top-image {
+    width: 200px;
+}
+
+nav {
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+ul li a{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    width: 90%;
+}
+
+ul li img {
+    width: 25px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.right {
+    width: 85%;
+    background-color: #D1D1E0;
+    border-radius: 80px 0px 0px 80px;
+    box-shadow: 8px 8px 12px #0000003c;
+    color: #464590;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.right {
+    width: 85%;
+    background-color: #D1D1E0;
+    border-radius: 80px 0px 0px 80px;
+    box-shadow: 8px 8px 12px #0000003c;
+    color: #464590;
+    padding: 20px;
+}
+
+.right h1 {
+    color: #05022B;
+}
+
+.top {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: center;
+}
+
+.top a {
+    text-decoration: none;
+    background-color: #fff;
+    padding: 20px 40px;
+    font-size: 22px;
+    border-radius: 20px;
+    color: #05022B;
+}
+
+.top a:hover {
+    background-color: #464590;
+    color: #fff;
+    transition: all ease 0.2s;
+}
+
+.bottom {
+    display: flex;
+    gap: 60px;
+    justify-content: end;
+    width: 100%;
+}
+
+.bottom a {
+    text-decoration: none;
+    background-color: #fff;
+    padding: 20px 40px;
+    font-size: 22px;
+    border-radius: 20px;
+    color: #05022B;
+}
+
+.bottom a:hover {
+    background-color: #464590;
+    color: #fff;
+    transition: all ease 0.2s;
+}
+
+#table-container {
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    overflow: auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+.btn-link, .delete {
+    background-color: #A369FF;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.delete { 
+    background-color: #d32020;
+    cursor: pointer;
+}
+
+#logoutButton {
+    margin-top: 150px;
+    width: 70%;
+    padding: 8px;
+    border: none;
+    border-radius: 16px;
+    font-size: 22px;
+    background-color: #d32020;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Conteúdo do popup */
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Estilo do botão de fechar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    width: 80%;
+}
+
+.center img {
+    width: 250px;
+    height: 300px;
+}
+
+.center .img1 {
+    width: 220px;
+    height: 300px;
+}
+
+/*------MODAL------*/
+
+/* Estilos do modal */
+.modal, .modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente */
+}
+
+.modal-content, .modal-content2, .modal-content-add{
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 400px;
+    position: relative; /* Necessário para o posicionamento do botão de fechar */
+    width: 80%;
+    max-width: 600px;
+    border-radius: 22px;
+    height: 50%;
+    overflow: auto;
+    box-shadow: 0 0 0 15px #fff;
+}
+
+.modal-content h2 {
+    font-size: 40px;
+}
+
+
+.modal-content-add {
+    box-shadow: 0 0 0 15px white;
+}
+
+
+#modalAdicionarDisciplinas #modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#modalAdicionarDisciplinas #modal-content input {
+    border: none;
+    border-bottom: 2px solid #05022B;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+#modalAdicionarDisciplinas #modal-content select {
+    padding: 8px;
+    width: 30%;
+    border: none;
+    border-radius: 22px;
+    background-color: #05022B;
+    color: #fff;
+    font-size: 18px;
+}
+
+#modalAdicionarDisciplinas #modal-content label {
+    font-size: 18px;
+}
+
+#modalAdicionarDisciplinas #modal-content button {
+    width: 30%;
+    margin: 0 auto;
+    padding: 8px;
+    border: none;
+    border-radius: 22px;
+    background-color: #05022B;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#formModal, #formModal-aluno, #formModal-prof {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#formModal h2 {
+    font-size: 40px;
+}
+
+#formModal input, #formModal-aluno input, #formModal-prof input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #05022B;
+    font-size: 22px;
+    outline: none;
+    color: #05022B;
+}
+
+#formModal span {
+    color: #05022B;
+}
+
+#formModal input::placeholder, #formModal-aluno input::placeholder, #formModal-prof input::placeholder {
+    color: #05022B;
+}
+
+#formModal select {
+    width: 30%;
+    padding: 6px;
+    border: none;
+    border-radius: 16px;
+    background-color: #05022B;
+    color: #fff;
+}
+
+#formModal button, #formModal-aluno button, #formModal-prof button {
+    padding: 8px;
+    width: 30%;
+    border: none;
+    border-radius: 16px;
+    background-color: #05022B;
+    color: #fff;
+    font-size: 18px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+
+#disciplinasModalContent {
+    margin-top: 40px;
+    font-size: 18px;
+    padding: 40px;
+}
+
+.modal-content p {
+    margin-top: 20px;
+    word-wrap: break-word; /* Quebra de palavras longas */
+    text-overflow: ellipsis; /* Adicionar "..." para texto longo */
+    overflow: auto;
+    cursor: pointer;
+}
+
+/* Botão de fechar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}    
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}    
+
+#modalAdicionarAlunos .modal-content label {
+    font-size: 20px;
+}
+
+#modalAdicionarAlunos .modal-content select {
+    padding: 8px;
+    border: none;
+    border-radius: 16px;
+    background-color: #05022B;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+
+#alunosList li {
+    cursor: pointer;
+}
+
+#alunosList li.selected {
+    background-color: #007BFF; /* Cor de destaque */
+    color: white; /* Texto em branco */
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+#searchAlunos {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#searchAlunos:focus {
+    border-color: #007BFF; /* Borda azul ao focar */
+    outline: none; /* Remove a borda padrão ao focar */
+}
+
+.alunos-list {
+    list-style-type: none; /* Remove marcadores */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margem */
+    max-height: 130px; /* Altura máxima da lista */
+    overflow-y: auto; /* Adiciona rolagem se necessário */
+    border: 1px solid #ccc; /* Borda da lista */
+    border-radius: 4px; /* Bordas arredondadas */
+    display: none; /* Oculta a lista inicialmente */
+}
+
+.alunos-list li {
+    padding: 10px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para o fundo */
+}
+
+.alunos-list li:hover {
+    background-color: #f0f0f0; /* Fundo claro ao passar o mouse */
+}
+
+.alunos-list li.selected {
+    background-color: #007BFF; /* Cor de destaque ao selecionar */
+    color: white; /* Texto em branco */
+}
+
+#confirmarAdicionarAlunos {
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    background-color: #05022B;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 1;
+    margin-bottom: 10px;
+}
+
+#alunosDaTurmaTable td button {
+    background-color: #A369FF;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+#alunosDaTurmaTable button{
+    background-color: #A369FF;
+    padding: 8px 12px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    left: 38%;
+    bottom: 0;
+}
+
+.modalContetDIV {
+    padding: 10px;
+    height: 80%;
+    overflow: auto;
+}
+
+#disciplinasModal .modal-content { 
+   max-width: 1000px;
+   height: 70%;
+   margin: 7% auto;
+}
+
+#disciplinasModal .modal-content button {
+    position: absolute;
+    bottom: 0;
+    left: 1;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    background-color: #05022B;
+    color: #fff;
+    font-size: 18px;
+}
+
+#disciplinasModal .modal-content select {
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none; /* Esconder o botão por padrão */
+    background-color: transparent;
+    border: none;
+    color: white; /* Cor do ícone */
+    font-size: 30px; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor de mão */
+}
+
+@media (max-width: 768px) {
+    .left {
+        width: 100%; /* Largura total em telas pequenas */
+        position: relative; /* Para controle de posicionamento */
+    }
+
+
+    .menu-toggle {
+        display: block; /* Mostrar botão de menu hambúrguer */
+        position: absolute; /* Posicionar dentro da div */
+        top: 20px; /* Ajuste a posição se necessário */
+        left: 20px; /* Ajuste a posição se necessário */
+        z-index: 2; /* Para que fique acima do menu */
+        color: #fff;
+        font-size: 30px;
+        font-weight: 900;
+    }
+
+    nav {
+        display: none; /* Esconder o menu por padrão em telas pequenas */
+    }
+
+    nav.active {
+        display: flex; /* Mostrar o menu quando ativado */
+        flex-direction: column; /* Ajustar o layout do menu */
+        margin-top: 50px;
+    }
+
+    .right {
+        width: 100%; /* Largura total da div direita em telas pequenas */
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .top {
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .modal-content {
+        margin: 50% auto;
+    }   
+
+    #formModal select {
+        width: 50%;
+    }
+
+    #formModal button, #formModal-aluno button, #formModal-prof button {
+        width: 50%;
+    }
+
+    .btn-link, .delete {
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+    }
+}

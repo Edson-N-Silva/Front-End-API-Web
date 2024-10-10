@@ -12,21 +12,19 @@
     </div>
     <div class="container">
         <div class="left">
-            <form action="#">
-                <h1>LOGIN</h1>
+            <form id="loginForm">
+                <h1>Login</h1>
                 <p>Entre para iniciar sua sessão</p>
-                <select name="tipo" id="tipo">
-                    <option value="professor">Professor</option>
-                    <option value="coordenador">Coordenador</option>
-                </select>
-                <input type="text" name="cpf" id="cpf" placeholder="CPF:" required>
-                <input type="password" placeholder="SENHA" required>
+                <input type="text" name="email" id="email" placeholder="E-MAIL:" required>
+                <input type="password" id="password" placeholder="SENHA" required>
                 <button id="button" name="button">Entrar</button>
             </form>
+            <a href="/cadastroCoord.html">Registre-se como Coordenador</a>
         </div>
         <div class="right">
-                <img src="/imgs/meninos.png" alt="Meninos estudando">
+                <img src="/imgs/illustration.png" alt="Meninos estudando">
         </div>
     </div>
+    <script src="/js/login.js"></script>
 </body>
 </html>
