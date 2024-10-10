@@ -1,5 +1,5 @@
 // URL do backend
-const backendUrl = 'http://localhost:3000/api';
+const backendUrl = 'https://back-end-pi-web.onrender.com/api';
 
 // Função de login
 document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
